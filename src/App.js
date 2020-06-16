@@ -67,7 +67,7 @@ function App() {
               bcolor="blue"
               data={comaSeparator.format(confirmedCases)}
               title={"Confirmed Cases"}
-              btext="Number of cases of COVID-19."
+              btext="Number of total cases of COVID-19."
             ></Card>
           </Grid>
           <Grid item>
