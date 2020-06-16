@@ -23,7 +23,6 @@ function App() {
       setDataRecovered(fdata.recovered.value);
       setDataDeaths(fdata.deaths.value);
       setDate(fdata.lastUpdate);
-      setConfirmed(fdata.confirmed);
     }
 
     currentData();
