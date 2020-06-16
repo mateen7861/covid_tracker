@@ -14,7 +14,7 @@ function App() {
   const [deaths, setDataDeaths] = useState();
   const [sCountry, setCountry] = useState();
   const [date, setDate] = useState();
-  const [confirmed, setConfirmed] = useState();
+
   useEffect(() => {
     async function currentData() {
       const fdata = await getData();
