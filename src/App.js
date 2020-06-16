@@ -44,7 +44,7 @@ function App() {
         </Grid>
         <Grid item container justify="center">
           <Grid item>
-            <img height={220} src={covid19}></img>
+            <img height={220} src={covid19} alt="covid"></img>
           </Grid>
         </Grid>
         <Grid item container direction="row" justify="center">
