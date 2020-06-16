@@ -23,6 +23,7 @@ export default function OutlinedCard(props) {
       <CardContent>
         <Typography variant="h6">{props.title}</Typography>
         <Typography variant="h3">{props.data}</Typography>
+        <Typography>{props.btext}</Typography>
       </CardContent>
     </Card>
   );
