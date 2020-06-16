@@ -7,12 +7,14 @@ import Card from "./components/Cards/Card";
 import SelectBox from "./components/selectBox/SelectBox";
 import Footer from "./components/footer/footer";
 import Chart from "./components/charts/nchart";
+
 function App() {
   const [confirmedCases, setDataConfirmed] = useState();
   const [recovered, setDataRecovered] = useState();
   const [deaths, setDataDeaths] = useState();
   const [sCountry, setCountry] = useState();
   const [date, setDate] = useState();
+  const [confirmed, setConfirmed] = useState();
   useEffect(() => {
     async function currentData() {
       const fdata = await getData();
@@ -21,6 +23,7 @@ function App() {
       setDataRecovered(fdata.recovered.value);
       setDataDeaths(fdata.deaths.value);
       setDate(fdata.lastUpdate);
+      setConfirmed(fdata.confirmed);
     }
 
     currentData();
@@ -65,7 +68,7 @@ function App() {
               bcolor="blue"
               data={comaSeparator.format(confirmedCases)}
               title={"Confirmed Cases"}
-              btext="Number of active cases of COVID-19."
+              btext="Number of cases of COVID-19."
             ></Card>
           </Grid>
           <Grid item>
@@ -98,6 +101,7 @@ function App() {
           </Grid>
         </Grid>
       </Grid>
+
       <br />
       <br />
       <Footer></Footer>
